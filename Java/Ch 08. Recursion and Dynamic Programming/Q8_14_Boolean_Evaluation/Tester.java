@@ -1,5 +1,6 @@
 package Q8_14_Boolean_Evaluation;
 
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Random;
@@ -18,14 +19,14 @@ public class Tester {
 	}
 	
 	public static char getRandomOperator() {
-		Random rand = new Random();
+		Random rand = new SecureRandom();
 		int r = rand.nextInt(3);
 		char[] ops = {'^', '&', '|'};
 		return ops[r];
 	}
 	
 	public static String getRandomExpression() {
-		Random rand = new Random();
+		Random rand = new SecureRandom();
 		int len = rand.nextInt(10) * 2 + 1;
 		String s = "";
 		for (int i = 0; i < len; i++) {

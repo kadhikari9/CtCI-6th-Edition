@@ -1,10 +1,11 @@
 package Q6_07_The_Apocalypse;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Question {
 	public static int[] runOneFamily() {
-		Random random = new Random();
+		Random random = new SecureRandom();
 		int boys = 0;
 		int girls = 0;
 		while (girls == 0) { // until we have a girl

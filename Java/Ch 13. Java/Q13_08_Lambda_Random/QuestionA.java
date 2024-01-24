@@ -1,5 +1,6 @@
 package Q13_08_Lambda_Random;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -8,7 +9,7 @@ public class QuestionA {
 	
 	public static List<Integer> getRandomSubset(List<Integer> list) {
 		List<Integer> subset = new ArrayList<Integer>();
-		Random random = new Random();
+		Random random = new SecureRandom();
 		for (int item : list) {
 			if (random.nextBoolean()) {
 				subset.add(item);
