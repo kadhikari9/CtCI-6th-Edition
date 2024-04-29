@@ -1,5 +1,6 @@
 package Q16_15_Master_Mind;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Question {
@@ -119,7 +120,7 @@ public class Question {
 	public static String randomString() {
 		int length = 4;
 		char[] str = new char[length];
-		Random generator = new Random();
+		Random generator = new SecureRandom();
 		
 		for (int i = 0; i < length; i++) {
 			int v = generator.nextInt(4);

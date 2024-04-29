@@ -1,5 +1,6 @@
 package Q6_10_Test_Strips;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
@@ -12,7 +13,7 @@ public class QuestionB {
 		}
 		
 		if (poisoned == -1) {
-			Random random = new Random();
+			Random random = new SecureRandom();
 			poisoned = random.nextInt(nBottles);
 		}
 		bottles.get(poisoned).setAsPoisoned();

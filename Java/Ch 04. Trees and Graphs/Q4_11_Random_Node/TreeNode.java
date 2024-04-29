@@ -1,5 +1,6 @@
 package Q4_11_Random_Node;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /* One node of a binary tree. The data element stored is a single 
@@ -50,7 +51,7 @@ public class TreeNode {
 	
 	public TreeNode getRandomNode() {
 		int leftSize = left == null ? 0 : left.size();
-		Random random = new Random();
+		Random random = new SecureRandom();
 		int index = random.nextInt(size);
 		if (index < leftSize) {
 			return left.getRandomNode();
