@@ -1,5 +1,6 @@
 package Q4_11_Random_Node;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Tree {
@@ -20,7 +21,7 @@ public class Tree {
 	public TreeNode getRandomNode() {
 		if (root == null) return null;
 		
-		Random random = new Random();
+		Random random = new SecureRandom();
 		int i = random.nextInt(size());
 		return root.getIthNode(i);
 	}
