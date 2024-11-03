@@ -1,5 +1,6 @@
 package Q13_08_Lambda_Random;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,7 +8,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class QuestionC {
-	public static Random random = new Random();
+	public static Random random = new SecureRandom();
 	public static Predicate<Object> flipCoin = o -> {
 		return random.nextBoolean();
 	};
