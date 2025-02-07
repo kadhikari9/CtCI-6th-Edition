@@ -1,12 +1,13 @@
 package Q8_13_Stack_of_Boxes;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Tester {
 
 	public static Box createRandomBox() {
-		Random r = new Random();
+		Random r = new SecureRandom();
 		return new Box(r.nextInt(100), r.nextInt(100), r.nextInt(100));
 	}
 	

@@ -1,5 +1,6 @@
 package Q17_14_Smallest_K;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import CtCILibrary.AssortedMethods;
@@ -91,7 +92,7 @@ public class QuestionD {
 	}
 	
 	public static int randomIntInRange(int min, int max) {
-		Random rand = new Random();
+		Random rand = new SecureRandom();
 		return rand.nextInt(max + 1 - min) + min;
 	}	
  
