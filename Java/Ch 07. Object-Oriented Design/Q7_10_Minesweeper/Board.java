@@ -1,5 +1,6 @@
 package Q7_10_Minesweeper;
 
+import java.security.SecureRandom;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
@@ -46,7 +47,7 @@ public class Board {
 	
 	private void shuffleBoard() {
 		int nCells = nRows * nColumns;
-		Random random = new Random();
+		Random random = new SecureRandom();
 		for (int index1 = 0; index1 < nCells; index1++) {
 			int index2 = index1 + random.nextInt(nCells - index1);
 			if (index1 != index2) {

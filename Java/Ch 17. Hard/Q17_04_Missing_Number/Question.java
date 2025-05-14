@@ -1,5 +1,6 @@
 package Q17_04_Missing_Number;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -52,7 +53,7 @@ public class Question {
     }
 
     public static void main(String[] args) {
-        Random rand = new Random(); 
+        Random rand = new SecureRandom(); 
         int n = rand.nextInt(300000) + 1;
         int missing = rand.nextInt(n+1);
         ArrayList<BitInteger> array = initialize(n, missing);

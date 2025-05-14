@@ -1,5 +1,6 @@
 package Q7_06_Jigsaw;
 
+import java.security.SecureRandom;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -7,7 +8,7 @@ public class Question {
 
 	
 	public static Edge createRandomEdge(String code) {
-		Random random = new Random();
+		Random random = new SecureRandom();
 		Shape type = Shape.INNER;
 		if (random.nextBoolean()) {
 			type = Shape.OUTER;
@@ -45,7 +46,7 @@ public class Question {
 
 		/* Shuffle and rotate pieces. */
 		LinkedList<Piece> pieces = new LinkedList<Piece>();
-		Random r = new Random();
+		Random r = new SecureRandom();
 		for (int row = 0; row < size; row++) {
 			for (int column = 0; column < size; column++) {
 				int rotations = r.nextInt(4);

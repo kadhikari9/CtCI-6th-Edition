@@ -1,5 +1,6 @@
 package Q16_10_Living_People;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class QuestionB {
@@ -44,7 +45,7 @@ public class QuestionB {
 		int n = 3;
 		int first = 1900;
 		int last = 2000;
-		Random random = new Random();
+		Random random = new SecureRandom();
 		Person[] people = new Person[n];
 		for (int i = 0; i < n; i++) {
 			int birth = first + random.nextInt(last - first);
